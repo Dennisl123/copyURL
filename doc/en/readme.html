@@ -1,0 +1,50 @@
+<html>
+<head><title>Copy URL</title></head>
+<body>
+<h1>Copy URL</h1>
+<p>Copy URL lets you copy URLs to the clipboard without leaving the keyboard, and announces what it copied.</p>
+<h2>Commands</h2>
+<table border="1" cellpadding="4">
+<tr><th>Default shortcut</th><th>Action</th></tr>
+<tr><td>Alt+Control+Windows+C</td><td>Copy the URL of the current page/document.</td></tr>
+<tr><td>Alt+Control+Windows+L</td><td>Copy the URL of the link at the current browse mode cursor (or navigator object) position - without clicking it.</td></tr>
+</table>
+<h2>Usage</h2>
+<p><b>Copy page URL:</b> Press <b>Alt+Control+Windows+C</b> while focused in a browse-mode document (e.g. a web page in Firefox, Chrome, or Edge). NVDA will copy the page's URL to the clipboard and speak/braille it.</p>
+<p><b>Copy link URL:</b> Move your browse-mode cursor (or NVDA's navigator object, via Object Navigation) onto a link, then press <b>Alt+Control+Windows+L</b>. NVDA will copy that link's destination URL to the clipboard and speak/braille it, without activating the link.</p>
+<h2>Settings</h2>
+<p>Open <b>NVDA menu &gt; Preferences &gt; Settings &gt; Copy URL</b> to find:</p>
+<ul>
+<li><b>Gesture configuration</b> - explains how to change either shortcut with NVDA's built-in <b>Input Gestures</b> dialog. Open <b>NVDA menu &gt; Preferences &gt; Input Gestures</b>, find the <b>Copy URL</b> category, then add, change, or remove a gesture for the command you want.</li>
+<li><b>Say "URL copied" before speaking the copied page URL</b> - controls the announcement for the Copy Page URL command (Alt+Control+Windows+C).</li>
+<li><b>Enable the Copy Link URL command</b> - turns the Copy Link URL command (Alt+Control+Windows+L) on or off entirely. When off, pressing that shortcut just tells you the command is disabled rather than copying anything.</li>
+<li><b>Say "Link URL copied" before speaking the copied link URL</b> - controls the announcement for the Copy Link URL command. This is independent of the "Enable" checkbox above - it stays available whether the command is turned on or off.</li>
+</ul>
+<p>The default shortcuts are <b>Alt+Control+Windows+C</b> for Copy page URL and <b>Alt+Control+Windows+L</b> for Copy link URL. In Input Gestures, a user can replace either default, add another shortcut, or remove a shortcut. NVDA saves those personal assignments in its standard gesture map, so they continue to work after a restart.</p>
+<p>All options are independent of each other. Uncheck a "Say ..." checkbox if you'd rather NVDA just speak that command's copied URL on its own, without a prefix.</p>
+<h2>What's New</h2>
+<h3>Version 1.9</h3>
+<ul>
+<li>Fixed gesture customization so user-defined Copy URL shortcuts saved in NVDA's Input Gestures dialog are no longer overridden by the add-on.</li>
+<li>Restored the original default bindings: <b>Alt+Control+Windows+C</b> for Copy page URL and <b>Alt+Control+Windows+L</b> for Copy link URL.</li>
+<li>Updated Copy URL settings with directions to the supported Input Gestures dialog, where users can add, change, or remove each command's shortcut.</li>
+</ul>
+<h3>Version 1.8</h3>
+<ul>
+<li>Added initial configurable-gesture settings. These controls were superseded in version 1.9 because they could override NVDA's own saved gesture assignments.</li>
+</ul>
+<h3>Version 1.7</h3>
+<ul>
+<li>Provided separate settings for the page URL and link URL announcement prefixes.</li>
+<li>Added the option to enable or disable the Copy Link URL command.</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>The "copy page URL" command works in any application that exposes a document identifier through NVDA's browse mode (most web browsers).</li>
+<li>The "copy link URL" command works on links exposed via IAccessible2 (most links in Firefox, Chrome, and Edge). If NVDA can't determine a link's destination, it will say "No link found".</li>
+<li>If the Copy Link URL command is turned off in settings, pressing its shortcut says "Copy Link URL is disabled in Copy URL settings" instead of copying anything.</li>
+<li>If no page URL can be found, NVDA will say "No URL found".</li>
+<li>You can change either shortcut key at any time via NVDA menu &gt; Preferences &gt; Input Gestures &gt; Copy URL.</li>
+</ul>
+</body>
+</html>
