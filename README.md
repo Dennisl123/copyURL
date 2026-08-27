@@ -1,2 +1,8 @@
-  # copyURL
-        NVDA add-on for copying the current page or link URL to the clipboard.
+# copyURL
+NVDA add-on for copying the current page or link URL to the clipboard.
+
+Author
+Dennis Long
+
+ Contact
+dennisl@fastmail.com  
