@@ -2,7 +2,7 @@
 <head><title>Copy URL</title></head>
 <body>
 <h1>Copy URL</h1>
-<p>Copy URL lets you copy URLs to the clipboard without leaving the keyboard, and announces what it copied.</p>
+<p>Copy URL is designed for web browsers. It lets you copy URLs to the clipboard without leaving the keyboard, and announces what it copied. It is not designed for browse mode in non-browser applications such as Microsoft Word.</p>
 <p><b>Author:</b> Dennis Long &lt;<a href="mailto:dennisl@fastmail.com">dennisl@fastmail.com</a>&gt;</p>
 <h2>Commands</h2>
 <table border="1" cellpadding="4">
@@ -23,7 +23,14 @@
 </ul>
 <p>The default shortcuts are <b>Alt+Control+Windows+C</b> for Copy page URL and <b>Alt+Control+Windows+L</b> for Copy link URL. In Input Gestures, a user can replace either default, add another shortcut, or remove a shortcut. NVDA saves those personal assignments in its standard gesture map, so they continue to work after a restart.</p>
 <p>All options are independent of each other. Uncheck a "Say ..." checkbox if you'd rather NVDA just speak that command's copied URL on its own, without a prefix.</p>
+<h2>UIA Browse Mode Limitation</h2>
+<p>In Microsoft Edge with <b>Use UI Automation to access Microsoft Edge and other Chromium based browsers</b> enabled in NVDA's Advanced settings, the Copy Link URL command may work, but the Copy Page URL command may be unable to obtain the current page's direct URL and say <b>No URL found</b>. For reliable page-URL copying, use the browser's standard browse-mode accessibility implementation rather than UIA browse mode.</p>
 <h2>What's New</h2>
+<h3>Version 1.9.2</h3>
+<ul>
+<li>Clarified that Copy URL is designed only for web browsers, not browse mode in applications such as Microsoft Word.</li>
+<li>Documented the Copy Page URL limitation in Edge when UIA browse mode is enabled.</li>
+</ul>
 <h3>Version 1.9.1</h3>
 <ul>
 <li>Updated author, compatibility, licensing, and documentation metadata for NVDA Add-on Store submission.</li>
