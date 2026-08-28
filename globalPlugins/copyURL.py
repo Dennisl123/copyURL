@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copy URL - NVDA Global Plugin
+# Copyright (C) 2026 Dennis Long
+# Licensed under the GNU General Public License version 2 or later.
 #
 # Two commands:
 #   1. Copy the URL of the current document/page.
@@ -106,15 +108,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(
-			CopyURLSettingsPanel
-		)
+		categoryClasses = gui.settingsDialogs.NVDASettingsDialog.categoryClasses
+		if CopyURLSettingsPanel not in categoryClasses:
+			categoryClasses.append(CopyURLSettingsPanel)
 
 	def terminate(self):
+		categoryClasses = gui.settingsDialogs.NVDASettingsDialog.categoryClasses
+		if CopyURLSettingsPanel in categoryClasses:
+			categoryClasses.remove(CopyURLSettingsPanel)
 		super().terminate()
-		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(
-			CopyURLSettingsPanel
-		)
 
 	def _getCurrentURL(self):
 		"""
