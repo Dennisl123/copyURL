@@ -1,6 +1,6 @@
 # Copy URL
 
-Copy URL is an NVDA add-on that copies the current web page URL or a link's destination URL to the clipboard and announces the result.
+Copy URL is an NVDA add-on for web browsers. It copies the current web page URL or a link's destination URL to the clipboard and announces the result.
 
 ## Commands
 
@@ -21,7 +21,11 @@ Open **NVDA menu > Preferences > Settings > Copy URL** to:
 
 - Minimum NVDA version: 2019.3.0
 - Last tested NVDA version: 2026.1.1
-- Designed for browse-mode content in browsers such as Firefox, Chrome, and Edge.
+- Designed only for web-browser content in browsers such as Firefox, Chrome, and Edge. It is not designed for browse mode in non-browser applications such as Microsoft Word.
+
+## UIA browse mode limitation
+
+In Microsoft Edge with **Use UI Automation to access Microsoft Edge and other Chromium based browsers** enabled in NVDA's Advanced settings, the Copy Link URL command may work, but the Copy Page URL command may be unable to obtain the current page's direct URL and say "No URL found." For reliable page-URL copying, use the browser's standard browse-mode accessibility implementation rather than UIA browse mode.
 
 ## Privacy and security
 
@@ -36,6 +40,11 @@ Dennis Long <dennisl@fastmail.com>
 Source: https://github.com/Dennisl123/copyURL
 
 Copyright (C) 2026 Dennis Long. Licensed under the [GNU General Public License version 2 or later](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+## Changes in 1.9.2
+
+- Clarified that Copy URL is designed only for web browsers, not browse mode in applications such as Microsoft Word.
+- Documented the Copy Page URL limitation in Edge when UIA browse mode is enabled.
 
 ## Changes in 1.9.1
 
